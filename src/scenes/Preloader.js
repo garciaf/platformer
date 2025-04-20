@@ -31,6 +31,9 @@ export class Preloader extends Scene
     {
         //  Load the assets for the game - Replace with your own assets
         this.load.setPath('assets');
+        this.load.atlas('character', 'character.png', 'character.json');
+        this.load.image('tiles', 'sand_packed.png');
+        this.load.tilemapTiledJSON('map', 'game.json');
 
         this.load.image('logo', 'logo.png');
     }
@@ -41,6 +44,6 @@ export class Preloader extends Scene
         //  For example, you can define global animations here, so we can use them in other scenes.
 
         //  Move to the MainMenu. You could also swap this for a Scene Transition, such as a camera fade.
-        this.scene.start('MainMenu');
+        this.scene.start('Game');
     }
 }
