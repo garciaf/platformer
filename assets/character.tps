@@ -50,7 +50,7 @@
         <key>dxtCompressionMode</key>
         <enum type="SettingsBase::DxtCompressionMode">DXT_PERCEPTUAL</enum>
         <key>ditherType</key>
-        <enum type="SettingsBase::DitherType">NearestNeighbour</enum>
+        <enum type="SettingsBase::DitherType">PngQuantLow</enum>
         <key>backgroundColor</key>
         <uint>0</uint>
         <key>libGdx</key>
@@ -74,7 +74,7 @@
         <key>textureSubPath</key>
         <string></string>
         <key>textureFormat</key>
-        <enum type="SettingsBase::TextureFormat">png</enum>
+        <enum type="SettingsBase::TextureFormat">png8</enum>
         <key>borderPadding</key>
         <uint>0</uint>
         <key>maxTextureSize</key>
@@ -94,7 +94,7 @@
         <key>algorithmSettings</key>
         <struct type="AlgorithmSettings">
             <key>algorithm</key>
-            <enum type="AlgorithmSettings::AlgorithmId">Basic</enum>
+            <enum type="AlgorithmSettings::AlgorithmId">MaxRects</enum>
             <key>freeSizeMode</key>
             <enum type="AlgorithmSettings::AlgorithmFreeSizeMode">Best</enum>
             <key>sizeConstraints</key>
@@ -161,7 +161,7 @@
             <key>trimMargin</key>
             <uint>1</uint>
             <key>trimMode</key>
-            <enum type="SpriteSettings::TrimMode">None</enum>
+            <enum type="SpriteSettings::TrimMode">CropKeepPos</enum>
             <key>tracerTolerance</key>
             <int>200</int>
             <key>heuristicMask</key>
@@ -169,29 +169,345 @@
             <key>defaultPivotPoint</key>
             <point_f>0.5,0.5</point_f>
             <key>writePivotPoints</key>
-            <false/>
+            <true/>
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Jump/NinjaCat_jump_01.png</key>
-            <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Jump/NinjaCat_jump_02.png</key>
-            <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Jump/NinjaCat_jump_03.png</key>
-            <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Jump/NinjaCat_jump_04.png</key>
+            <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Attack_kick/NinjaCat_attack_kick_01.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.339844,0.567568</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Attack_kick/NinjaCat_attack_kick_02.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.355469,0.531532</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Attack_kick/NinjaCat_attack_kick_03.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.367188,0.540541</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Attack_kick/NinjaCat_attack_kick_04.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.347656,0.513514</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Attack_punch/NinjaCat_attack_punch_01.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.328125,0.536036</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Attack_punch/NinjaCat_attack_punch_02.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.363281,0.522523</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Attack_punch/NinjaCat_attack_punch_03.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.40625,0.522523</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Attack_punch/NinjaCat_attack_punch_04.png</key>
             <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Jump/NinjaCat_jump_05.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.355469,0.504505</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Jump/NinjaCat_jump_01.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.328125,0.531532</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Jump/NinjaCat_jump_02.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.332031,0.531532</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Jump/NinjaCat_jump_03.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.292969,0.540541</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Jump/NinjaCat_jump_04.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.355469,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Jump/NinjaCat_jump_06.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.320313,0.572072</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Standing/NinjaCat_idle_01.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.34375,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Standing/NinjaCat_idle_02.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.347656,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Walk/NinjaCat_walk_01.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.292969,0.518018</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Walk/NinjaCat_walk_02.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.3125,0.509009</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Walk/NinjaCat_walk_03.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.316406,0.509009</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Walk/NinjaCat_walk_04.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.304688,0.518018</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Walk/NinjaCat_walk_05.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.316406,0.504505</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Walk/NinjaCat_walk_06.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.308594,0.509009</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Walk/NinjaCat_walk_07.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.316406,0.490991</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9Paddings</key>
+                <rect>64,56,128,111</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../../../../Downloads/NinjaCat_images/Animations/Walk/NinjaCat_walk_08.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.320313,0.504505</point_f>
                 <key>spriteScale</key>
                 <double>1</double>
                 <key>scale9Enabled</key>
@@ -226,6 +542,14 @@
                     <filename>../../../../Downloads/NinjaCat_images/Animations/Jump/NinjaCat_jump_06.png</filename>
                     <filename>../../../../Downloads/NinjaCat_images/Animations/Standing/NinjaCat_idle_01.png</filename>
                     <filename>../../../../Downloads/NinjaCat_images/Animations/Standing/NinjaCat_idle_02.png</filename>
+                    <filename>../../../../Downloads/NinjaCat_images/Animations/Attack_punch/NinjaCat_attack_punch_01.png</filename>
+                    <filename>../../../../Downloads/NinjaCat_images/Animations/Attack_punch/NinjaCat_attack_punch_02.png</filename>
+                    <filename>../../../../Downloads/NinjaCat_images/Animations/Attack_punch/NinjaCat_attack_punch_03.png</filename>
+                    <filename>../../../../Downloads/NinjaCat_images/Animations/Attack_punch/NinjaCat_attack_punch_04.png</filename>
+                    <filename>../../../../Downloads/NinjaCat_images/Animations/Attack_kick/NinjaCat_attack_kick_01.png</filename>
+                    <filename>../../../../Downloads/NinjaCat_images/Animations/Attack_kick/NinjaCat_attack_kick_02.png</filename>
+                    <filename>../../../../Downloads/NinjaCat_images/Animations/Attack_kick/NinjaCat_attack_kick_03.png</filename>
+                    <filename>../../../../Downloads/NinjaCat_images/Animations/Attack_kick/NinjaCat_attack_kick_04.png</filename>
                 </array>
             </struct>
         </map>

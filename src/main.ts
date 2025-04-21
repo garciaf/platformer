@@ -1,4 +1,4 @@
-import * as Phaser from "phaser";
+import Phaser from 'phaser';
 
 import { Boot } from './scenes/Boot.js';
 import { Game } from './scenes/Game.js';
@@ -18,7 +18,7 @@ const config = {
         default: "matter",
         matter: {
             gravity: { y: 1 },
-            debug: true
+            debug: false
         }
     },
     scale: {
