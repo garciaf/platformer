@@ -62,10 +62,10 @@ export default class PlayerController {
     private jumpOnUpdate (dt: number) {
         if (this.cursors.left.isDown) {
             this.sprite.flipX = true;
-            this.sprite.setVelocityX(-this.speed/2);
+            this.sprite.setVelocityX(-this.speed);
         } else if (this.cursors.right.isDown) {
             this.sprite.flipX = false;
-            this.sprite.setVelocityX(this.speed/2);
+            this.sprite.setVelocityX(this.speed);
         }
     }
 

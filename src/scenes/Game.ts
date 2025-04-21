@@ -29,10 +29,27 @@ export class Game extends Scene
         const width = this.scale.width;
         
         const map = this.make.tilemap({ key: 'map' });
-        const tileset = map.addTilesetImage('sand', 'tiles');
+        const mapWidth = map.widthInPixels;
+        const mapHeight = map.heightInPixels;
+        
+        this.matter.world.setBounds(0, 0, mapWidth, mapHeight);
+        this.cameras.main.setBounds(0, 0, mapWidth, mapHeight);
 
+        const tileset = map.addTilesetImage('sand', 'tiles');
+        
         if (!tileset) {
             throw new Error('Tileset not found in tilemap.');
+        }
+
+        const backgroundTileset = map.addTilesetImage('rock', 'tilesBackground');
+        if (!backgroundTileset) {
+            throw new Error('Background tileset not found in tilemap.');
+        }
+
+        const backgroundLayer = map.createLayer('background', backgroundTileset);
+
+        if (!backgroundLayer) {
+            throw new Error('Background layer not found in tilemap.');
         }
 
         const ground = map.createLayer('ground', tileset);
@@ -68,24 +85,6 @@ export class Game extends Scene
         if (this.playerController) {
             this.playerController.update(dt);
         }
-        // const spaceJustPressed = Input.Keyboard.JustDown(this.cursors.space);
-        // if (spaceJustPressed && this.isTouchingGround) {
-        //     this.isTouchingGround = false;
-        //     this.player.setVelocityY(- Game.JUMP_VELOCITY);
-        //     this.player.play('jump', true);
-        // } else if (this.cursors.left.isDown) {
-        //     this.player.flipX = true;
-        //     this.player.setVelocityX(-Game.WALK_VELOCITY);
-        //     this.player.play('walk', true);
-        // } else if (this.cursors.right.isDown) {
-        //     this.player.flipX = false;
-        //     this.player.setVelocityX(Game.WALK_VELOCITY);
-        //     this.player.play('walk', true);
-        // } else {
-        //     this.player.setVelocityX(0);
-        //     this.player.play('idle', true);
-        // }
-
         
     }
 }
