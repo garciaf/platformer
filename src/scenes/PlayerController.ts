@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import StateMachine from '../utils/stateMachine';
+import StateMachine from '../utils/StateMachine';
 
 export default class PlayerController {
     private sprite: Phaser.Physics.Matter.Sprite;
