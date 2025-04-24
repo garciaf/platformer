@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
     base: "/platformer/",
-    publicDir: "assets",
+    publicDir: "public",
     build: {
         outDir: "dist",
     }
