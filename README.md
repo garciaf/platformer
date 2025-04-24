@@ -26,6 +26,7 @@ This template has been updated for:
 |---------|-------------|
 | `npm install` | Install project dependencies |
 | `npm run dev` | Launch a development web server |
+| `npx vite`    | Launch a development we server with type script |
 
 ## Writing Code
 
