@@ -35,8 +35,6 @@ export class Preloader extends Scene
         this.load.image('tiles', 'sand_packed.png');
         this.load.image('tilesBackground', 'rock_packed.png');
         this.load.tilemapTiledJSON('map', 'game.json');
-
-        this.load.image('logo', 'logo.png');
     }
 
     create ()

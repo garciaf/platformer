@@ -3,7 +3,6 @@ import Phaser from 'phaser';
 import { Boot } from './scenes/Boot.js';
 import { Game } from './scenes/Game.js';
 import { GameOver } from './scenes/GameOver.js';
-import { MainMenu } from './scenes/MainMenu.js';
 import { Preloader } from './scenes/Preloader.js';
 
 //  Find out more information about the Game Config at:
@@ -12,7 +11,7 @@ const config = {
     type: Phaser.AUTO,
     width: 1024,
     height: 768,
-    pixelArt: true,
+    pixelArt: false,
     roundPixels: false,
     parent: 'game-container',
     backgroundColor: '#028af8',
@@ -30,7 +29,6 @@ const config = {
     scene: [
         Boot,
         Preloader,
-        MainMenu,
         Game,
         GameOver
     ]
