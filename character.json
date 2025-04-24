@@ -1,0 +1,620 @@
+{
+	"textures": [
+		{
+			"image": "character-0.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1574,
+				"h": 403
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "NinjaCat_attack_punch_01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 126,
+						"h": 204
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 126,
+						"h": 204
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 126,
+						"h": 204
+					},
+					"anchor": {
+						"x": 0.6031746031746031,
+						"y": 0.5294117647058822
+					}
+				},
+				{
+					"filename": "NinjaCat_attack_punch_03.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 161,
+						"h": 199
+					},
+					"spriteSourceSize": {
+						"x": 27,
+						"y": 17,
+						"w": 161,
+						"h": 199
+					},
+					"frame": {
+						"x": 0,
+						"y": 204,
+						"w": 161,
+						"h": 199
+					},
+					"anchor": {
+						"x": 0.4782608695652174,
+						"y": 0.49748743718592964
+					}
+				},
+				{
+					"filename": "NinjaCat_idle_01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 125,
+						"h": 204
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 11,
+						"w": 125,
+						"h": 204
+					},
+					"frame": {
+						"x": 126,
+						"y": 0,
+						"w": 125,
+						"h": 204
+					},
+					"anchor": {
+						"x": 0.632,
+						"y": 0.49019607843137253
+					}
+				},
+				{
+					"filename": "NinjaCat_walk_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 125,
+						"h": 199
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 15,
+						"w": 125,
+						"h": 199
+					},
+					"frame": {
+						"x": 161,
+						"y": 204,
+						"w": 125,
+						"h": 199
+					},
+					"anchor": {
+						"x": 0.592,
+						"y": 0.49246231155778897
+					}
+				},
+				{
+					"filename": "NinjaCat_idle_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 125,
+						"h": 204
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 11,
+						"w": 125,
+						"h": 204
+					},
+					"frame": {
+						"x": 251,
+						"y": 0,
+						"w": 125,
+						"h": 204
+					},
+					"anchor": {
+						"x": 0.64,
+						"y": 0.49019607843137253
+					}
+				},
+				{
+					"filename": "NinjaCat_walk_05.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 129,
+						"h": 197
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 17,
+						"w": 129,
+						"h": 197
+					},
+					"frame": {
+						"x": 286,
+						"y": 204,
+						"w": 129,
+						"h": 197
+					},
+					"anchor": {
+						"x": 0.5813953488372093,
+						"y": 0.482233502538071
+					}
+				},
+				{
+					"filename": "NinjaCat_walk_07.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 125,
+						"h": 204
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 12,
+						"w": 125,
+						"h": 204
+					},
+					"frame": {
+						"x": 376,
+						"y": 0,
+						"w": 125,
+						"h": 204
+					},
+					"anchor": {
+						"x": 0.6,
+						"y": 0.47549019607843135
+					}
+				},
+				{
+					"filename": "NinjaCat_walk_01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 125,
+						"h": 197
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 17,
+						"w": 125,
+						"h": 197
+					},
+					"frame": {
+						"x": 415,
+						"y": 204,
+						"w": 125,
+						"h": 197
+					},
+					"anchor": {
+						"x": 0.552,
+						"y": 0.4974619289340102
+					}
+				},
+				{
+					"filename": "NinjaCat_attack_punch_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 132,
+						"h": 202
+					},
+					"spriteSourceSize": {
+						"x": 19,
+						"y": 13,
+						"w": 132,
+						"h": 202
+					},
+					"frame": {
+						"x": 501,
+						"y": 0,
+						"w": 132,
+						"h": 202
+					},
+					"anchor": {
+						"x": 0.5606060606060606,
+						"y": 0.5099009900990099
+					}
+				},
+				{
+					"filename": "NinjaCat_walk_03.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 125,
+						"h": 201
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 13,
+						"w": 125,
+						"h": 201
+					},
+					"frame": {
+						"x": 540,
+						"y": 202,
+						"w": 125,
+						"h": 201
+					},
+					"anchor": {
+						"x": 0.6,
+						"y": 0.4975124378109453
+					}
+				},
+				{
+					"filename": "NinjaCat_attack_punch_04.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 131,
+						"h": 202
+					},
+					"spriteSourceSize": {
+						"x": 18,
+						"y": 14,
+						"w": 131,
+						"h": 202
+					},
+					"frame": {
+						"x": 633,
+						"y": 0,
+						"w": 131,
+						"h": 202
+					},
+					"anchor": {
+						"x": 0.5572519083969466,
+						"y": 0.4851485148514851
+					}
+				},
+				{
+					"filename": "NinjaCat_walk_06.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 125,
+						"h": 201
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 125,
+						"h": 201
+					},
+					"frame": {
+						"x": 665,
+						"y": 202,
+						"w": 125,
+						"h": 201
+					},
+					"anchor": {
+						"x": 0.584,
+						"y": 0.4925373134328358
+					}
+				},
+				{
+					"filename": "NinjaCat_attack_kick_01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 124,
+						"h": 202
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 13,
+						"w": 124,
+						"h": 202
+					},
+					"frame": {
+						"x": 764,
+						"y": 0,
+						"w": 124,
+						"h": 202
+					},
+					"anchor": {
+						"x": 0.6209677419354839,
+						"y": 0.5594059405940595
+					}
+				},
+				{
+					"filename": "NinjaCat_walk_08.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 125,
+						"h": 201
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 14,
+						"w": 125,
+						"h": 201
+					},
+					"frame": {
+						"x": 790,
+						"y": 202,
+						"w": 125,
+						"h": 201
+					},
+					"anchor": {
+						"x": 0.608,
+						"y": 0.4875621890547263
+					}
+				},
+				{
+					"filename": "NinjaCat_attack_kick_03.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 168,
+						"h": 200
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 14,
+						"w": 168,
+						"h": 200
+					},
+					"frame": {
+						"x": 888,
+						"y": 0,
+						"w": 168,
+						"h": 200
+					},
+					"anchor": {
+						"x": 0.49404761904761907,
+						"y": 0.53
+					}
+				},
+				{
+					"filename": "NinjaCat_attack_kick_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 133,
+						"h": 200
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 14,
+						"w": 133,
+						"h": 200
+					},
+					"frame": {
+						"x": 915,
+						"y": 200,
+						"w": 133,
+						"h": 200
+					},
+					"anchor": {
+						"x": 0.6015037593984962,
+						"y": 0.52
+					}
+				},
+				{
+					"filename": "NinjaCat_attack_kick_04.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 133,
+						"h": 200
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 14,
+						"w": 133,
+						"h": 200
+					},
+					"frame": {
+						"x": 1048,
+						"y": 200,
+						"w": 133,
+						"h": 200
+					},
+					"anchor": {
+						"x": 0.5864661654135338,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "NinjaCat_jump_01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 125,
+						"h": 200
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 15,
+						"w": 125,
+						"h": 200
+					},
+					"frame": {
+						"x": 1056,
+						"y": 0,
+						"w": 125,
+						"h": 200
+					},
+					"anchor": {
+						"x": 0.624,
+						"y": 0.515
+					}
+				},
+				{
+					"filename": "NinjaCat_walk_04.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 125,
+						"h": 200
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 15,
+						"w": 125,
+						"h": 200
+					},
+					"frame": {
+						"x": 1181,
+						"y": 0,
+						"w": 125,
+						"h": 200
+					},
+					"anchor": {
+						"x": 0.576,
+						"y": 0.5000000000000001
+					}
+				},
+				{
+					"filename": "NinjaCat_jump_03.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 142,
+						"h": 196
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 18,
+						"w": 142,
+						"h": 196
+					},
+					"frame": {
+						"x": 1181,
+						"y": 200,
+						"w": 142,
+						"h": 196
+					},
+					"anchor": {
+						"x": 0.528169014084507,
+						"y": 0.5204081632653061
+					}
+				},
+				{
+					"filename": "NinjaCat_jump_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 125,
+						"h": 195
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 20,
+						"w": 125,
+						"h": 195
+					},
+					"frame": {
+						"x": 1306,
+						"y": 0,
+						"w": 125,
+						"h": 195
+					},
+					"anchor": {
+						"x": 0.632,
+						"y": 0.5025641025641026
+					}
+				},
+				{
+					"filename": "NinjaCat_jump_04.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 141,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 11,
+						"w": 141,
+						"h": 174
+					},
+					"frame": {
+						"x": 1431,
+						"y": 0,
+						"w": 141,
+						"h": 174
+					},
+					"anchor": {
+						"x": 0.5602836879432624,
+						"y": 0.5747126436781609
+					}
+				},
+				{
+					"filename": "NinjaCat_jump_05.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 124,
+						"h": 190
+					},
+					"spriteSourceSize": {
+						"x": 25,
+						"y": 18,
+						"w": 124,
+						"h": 190
+					},
+					"frame": {
+						"x": 1323,
+						"y": 195,
+						"w": 124,
+						"h": 190
+					},
+					"anchor": {
+						"x": 0.532258064516129,
+						"y": 0.4947368421052631
+					}
+				},
+				{
+					"filename": "NinjaCat_jump_06.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 127,
+						"h": 188
+					},
+					"spriteSourceSize": {
+						"x": 29,
+						"y": 26,
+						"w": 127,
+						"h": 188
+					},
+					"frame": {
+						"x": 1447,
+						"y": 174,
+						"w": 127,
+						"h": 188
+					},
+					"anchor": {
+						"x": 0.41732283464566927,
+						"y": 0.5372340425531915
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:e6542de5b092baab1b8b913a2357aec9:2683a8ce6e46ea40ea9f3200745e223e:e2d13453d60323318a1e6ef37783ae34$"
+	}
+}
