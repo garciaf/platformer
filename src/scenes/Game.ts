@@ -1,11 +1,16 @@
 import { Scene, Input, Types } from 'phaser';
 import  PlayerController from './PlayerController';
+import SlugController from './SlugController';
+import ObstacleController from './ObstacleController';
+import EventBus from '../utils/EventBus';
 
 export class Game extends Scene
 {   
     private cursors!: Types.Input.Keyboard.CursorKeys;
     private player?: Phaser.Physics.Matter.Sprite;
     private playerController?: PlayerController;
+    private slugs: SlugController[] = [];
+    private obstacles!: ObstacleController;
 
 
     constructor ()
@@ -21,10 +26,13 @@ export class Game extends Scene
         } else {
             throw new Error('Keyboard input is not available.');
         }
+        this.obstacles = new ObstacleController();
+        this.slugs = [];
     }
 
     create ()
     {   
+        
         const height = this.scale.height;
         const width = this.scale.width;
         
@@ -34,7 +42,7 @@ export class Game extends Scene
         
         this.matter.world.setBounds(0, 0, mapWidth, mapHeight);
         this.cameras.main.setBounds(0, 0, mapWidth, mapHeight);
-
+        
         const tileset = map.addTilesetImage('sand', 'tiles');
         
         if (!tileset) {
@@ -46,11 +54,12 @@ export class Game extends Scene
             throw new Error('Background tileset not found in tilemap.');
         }
 
-        const backgroundLayer = map.createLayer('background', backgroundTileset);
+    
+        // const backgroundLayer = map.createLayer('background', backgroundTileset);
 
-        if (!backgroundLayer) {
-            throw new Error('Background layer not found in tilemap.');
-        }
+        // if (!backgroundLayer) {
+        //     throw new Error('Background layer not found in tilemap.');
+        // }
 
         const ground = map.createLayer('ground', tileset);
         if (!ground) {
@@ -65,26 +74,66 @@ export class Game extends Scene
             throw new Error('Object layer not found in tilemap.');
         }
 
+
         objectLayer.objects.forEach((objectData) => { 
-            const { x = 0, y = 0, name, width = 0 } = objectData;
+            const { x = 0, y = 0, name, width = 0, height = 0 } = objectData;
 
-            if (name === 'spawn-player') {
-                this.player = this.matter.add.sprite(x, y, 'character').setFixedRotation();
-                this.player.setScale(0.3);
+            switch(name) {
+                case 'spawn-player':
+                    {
+                        this.player = this.matter.add.sprite(x, y, 'character').setFixedRotation();
+                        this.player.setScale(0.3);
+                        this.player.setFrictionStatic(0);
+                        this.player.setFriction(0);
 
-                this.playerController = new PlayerController(this.player, this.cursors);
-                this.cameras.main.startFollow(this.player);
-            } 
+                        this.playerController = new PlayerController(this.player, this.cursors, this.obstacles, this.cameras.main);
+                        this.cameras.main.startFollow(this.player);
+                        break;                    
+                    }
+                    case 'spawn-coin':
+                        {
+                            const coin = this.matter.add.sprite(x, y, 'coin', undefined, { 
+                                isSensor: true,
+                                isStatic: true,
+            
+                            });
+                            coin.setScale(0.1);
+                            coin.setData("type", 'coin');
+                            break   
+                        }
+                    case 'slug':
+                        {   
+                            const slug = this.matter.add.sprite(x, y, 'slug').setFixedRotation();
+                            slug.setScale(0.4);
+
+                            this.slugs.push(new SlugController(this, slug));
+                            this.obstacles.add("slug", slug.body as MatterJS.BodyType);
+                            break
+                        }
+                    case 'pit':
+                        {
+                            const pit = this.matter.add.rectangle(x+(width * 0.5), y + (height * 0.5), width, height, {
+                                isStatic: true,
+                                label: "pit"
+                            })
+                            this.obstacles.add("pit", pit);
+                        }
+                }
+
         });
 
-        this.matter.world.convertTilemapLayer(ground);
+        EventBus.on('PlayerDied', () => {
+            this.scene.start('GameOver');
+        });
 
+        this.matter.world.convertTilemapLayer(ground);  
+        this.scene.launch('ui');
     }
 
     update (dt: number) {
-        if (this.playerController) {
-            this.playerController.update(dt);
-        }
+        this.playerController?.update(dt);
+
+        this.slugs.forEach((slug) => slug.update(dt));
         
     }
 }

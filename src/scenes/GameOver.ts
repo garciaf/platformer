@@ -9,7 +9,7 @@ export class GameOver extends Scene
 
     create ()
     {
-        this.cameras.main.setBackgroundColor(0xff0000);
+        this.cameras.main.setBackgroundColor(0x000000);
 
         this.add.image(512, 384, 'background').setAlpha(0.5);
 
@@ -21,7 +21,7 @@ export class GameOver extends Scene
 
         this.input.once('pointerdown', () => {
 
-            this.scene.start('MainMenu');
+            this.scene.start('Game');
 
         });
     }

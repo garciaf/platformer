@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 
 import { Boot } from './scenes/Boot.js';
 import { Game } from './scenes/Game.js';
+import { UI } from './scenes/UI.js';
 import { GameOver } from './scenes/GameOver.js';
 import { Preloader } from './scenes/Preloader.js';
 
@@ -28,6 +29,7 @@ const config = {
     },
     scene: [
         Boot,
+        UI,
         Preloader,
         Game,
         GameOver

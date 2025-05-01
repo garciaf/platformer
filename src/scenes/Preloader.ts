@@ -32,7 +32,9 @@ export class Preloader extends Scene
         //  Load the assets for the game - Replace with your own assets
         this.load.setPath('assets');
         this.load.atlas('character', 'character.png', 'character.json');
+        this.load.atlas('slug', 'slug.png', 'slug.json');
         this.load.image('tiles', 'sand_packed.png');
+        this.load.image('coin', 'coin.png');
         this.load.image('tilesBackground', 'rock_packed.png');
         this.load.tilemapTiledJSON('map', 'game.json');
     }
